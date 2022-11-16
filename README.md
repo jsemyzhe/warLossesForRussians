@@ -6,5 +6,5 @@ I had practice with networking API (URLSession), UITabBarControllers, UIDatePick
 
 JSON file with personnel losses got its last update on July 21st, 2022.
 
-https://user-images.githubusercontent.com/41115139/202228678-a0caec99-e27b-442b-b214-b7d7d7988e37.mov
+https://user-images.githubusercontent.com/41115139/202229133-9c103383-b05c-46d5-883c-87527ce6d316.mov
 
