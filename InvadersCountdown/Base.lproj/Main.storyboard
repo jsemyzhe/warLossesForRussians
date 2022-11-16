@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F83-D1-G8w">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Equipment View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="EquipmentViewController" title="Equipment" id="BYZ-38-t0r" userLabel="Equipment View Controller" customClass="EquipmentViewController" customModule="InvadersCountdown" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="4aR-US-tRc">
+                                <rect key="frame" x="0.0" y="54.999999999999993" width="320" height="68.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWg-QG-Wi0">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="20.333333333333332"/>
+                                        <color key="backgroundColor" name="ua_blue"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="dark_military"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="mJb-3Z-LBk">
+                                        <rect key="frame" x="0.0" y="20.333333333333329" width="320" height="48"/>
+                                        <color key="backgroundColor" name="ua_blue"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="we7-rP-NBC"/>
+                                        </constraints>
+                                        <date key="minimumDate" timeIntervalSinceReferenceDate="667483200">
+                                            <!--2022-02-25 12:00:00 +0000-->
+                                        </date>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="datePickerChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="avl-du-rom"/>
+                                        </connections>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" red="0.84723299740000002" green="0.84680426119999996" blue="0.85882538559999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="IWg-QG-Wi0" firstAttribute="leading" secondItem="4aR-US-tRc" secondAttribute="leading" id="0Qg-Mm-CNH"/>
+                                    <constraint firstAttribute="trailing" secondItem="IWg-QG-Wi0" secondAttribute="trailing" id="4NA-1m-Qej"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="waS-jD-PWa">
+                                <rect key="frame" x="108" y="143.33333333333334" width="174" height="58.666666666666657"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day of war" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTb-i2-7dT">
+                                        <rect key="frame" x="15" y="15.000000000000002" width="118" height="28.666666666666671"/>
+                                        <color key="backgroundColor" name="ua_blue"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" name="dark_military"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9z-ce-xWV">
+                                        <rect key="frame" x="143" y="15.000000000000002" width="16" height="28.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" name="dark_military"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="ua_blue"/>
+                                <edgeInsets key="layoutMargins" top="15" left="15" bottom="15" right="15"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Au8-zW-xRV">
+                                <rect key="frame" x="15" y="232.00000000000003" width="360" height="508.66666666666674"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ydr-t7-6tf">
+                                        <rect key="frame" x="0.0" y="0.0" width="346" height="95.333333333333329"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="GRO-rq-ydr">
+                                                <rect key="frame" x="0.0" y="0.0" width="153" height="95.333333333333329"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Q9D-O3-CaN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="95.333333333333329"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tank" translatesAutoresizingMaskIntoConstraints="NO" id="xNf-cR-cvX">
+                                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                                <color key="tintColor" name="dark_military"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tanks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2XR-Rd-vSd">
+                                                                <rect key="frame" x="15.666666666666671" y="75" width="44" height="20.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" name="dark_military"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wo3-V5-2Jh">
+                                                        <rect key="frame" x="103" y="37.666666666666686" width="50" height="20.333333333333329"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="gMB-i4-gd9"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="dark_military"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="NHq-F5-N4X">
+                                                <rect key="frame" x="193" y="0.0" width="153" height="95.333333333333329"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hdf-xu-EGw">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="95.333333333333329"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bbm" translatesAutoresizingMaskIntoConstraints="NO" id="OK2-pU-1xt">
+                                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                                <color key="tintColor" name="dark_military"/>
+                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWD-2Y-OtN">
+                                                                <rect key="frame" x="21.000000000000004" y="75" width="33.333333333333343" height="20.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" name="dark_military"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXg-zT-yoD">
+                                                        <rect key="frame" x="103" y="37.666666666666686" width="50" height="20.333333333333329"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="Uwr-vO-pol"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="dark_military"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="ua_blue"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="STi-Iv-Cba">
+                                        <rect key="frame" x="0.0" y="103.33333333333331" width="358" height="95.333333333333314"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="BFj-kZ-JCg">
+                                                <rect key="frame" x="0.0" y="0.0" width="153" height="95.333333333333329"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZZd-80-WgO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="95.333333333333329"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aircraft" translatesAutoresizingMaskIntoConstraints="NO" id="Wa7-Uw-Hzd">
+                                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aircraft" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHf-Xx-40v">
+                                                                <rect key="frame" x="9.3333333333333321" y="75" width="56.333333333333343" height="20.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" name="dark_military"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCb-az-spv">
+                                                        <rect key="frame" x="103" y="37.666666666666686" width="50" height="20.333333333333329"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="UI9-tn-e3b"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="dark_military"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" name="ua_blue"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="IiO-J1-qEO">
+                                                <rect key="frame" x="193" y="0.0" width="165" height="95.333333333333329"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BZG-Pg-FCX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="87" height="95.333333333333329"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helicopter" translatesAutoresizingMaskIntoConstraints="NO" id="OLW-nX-geB">
+                                                                <rect key="frame" x="6" y="0.0" width="75" height="75"/>
+                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Helicopters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7z-mY-O7v">
+                                                                <rect key="frame" x="0.0" y="75" width="87" height="20.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" name="dark_military"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kR7-bI-d37">
+                                                        <rect key="frame" x="115" y="37.666666666666686" width="50" height="20.333333333333329"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="Ctn-sM-aBi"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="dark_military"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="ua_blue"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Okq-JE-7gf">
+                                        <rect key="frame" x="0.0" y="206.66666666666669" width="346" height="95.333333333333314"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="G1G-bP-jb6">
+                                                <rect key="frame" x="0.0" y="0.0" width="153" height="95.333333333333329"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bVI-vC-dcl">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="95.333333333333329"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="garmata" translatesAutoresizingMaskIntoConstraints="NO" id="8zE-T2-U63">
+                                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MRL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIq-T2-7st">
+                                                                <rect key="frame" x="20.333333333333332" y="74.999999999999943" width="34.333333333333343" height="20.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" name="dark_military"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFO-ZH-rAm">
+                                                        <rect key="frame" x="103" y="37.666666666666629" width="50" height="20.333333333333329"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="7Uc-H7-nGf"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="dark_military"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="TG5-P1-W3Q">
+                                                <rect key="frame" x="193" y="0.0" width="153" height="95.333333333333329"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="d35-8v-oGE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="95.333333333333329"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="missle" translatesAutoresizingMaskIntoConstraints="NO" id="rrH-oT-iRt">
+                                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Missiles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAF-yc-Yoa">
+                                                                <rect key="frame" x="7.3333333333333393" y="74.999999999999943" width="60.666666666666657" height="20.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" name="dark_military"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9FV-V0-lJy">
+                                                        <rect key="frame" x="103" y="37.666666666666629" width="50" height="20.333333333333329"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="aib-x7-BNa"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="dark_military"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="ua_blue"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="LdQ-xj-Q7E">
+                                        <rect key="frame" x="0.0" y="310" width="348" height="95.333333333333314"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="tEQ-Cd-QOq">
+                                                <rect key="frame" x="0.0" y="0.0" width="155" height="95.333333333333329"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hsW-wc-Rd3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="95.333333333333329"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ppo" translatesAutoresizingMaskIntoConstraints="NO" id="LfA-zA-rZS">
+                                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AAW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHn-C1-9vv">
+                                                                <rect key="frame" x="19.000000000000004" y="75" width="37.333333333333343" height="20.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" name="dark_military"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbw-bY-WLn">
+                                                        <rect key="frame" x="103" y="37.666666666666629" width="52" height="20.333333333333329"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="52" id="hx3-My-aeY"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="dark_military"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="Byq-eS-uQI">
+                                                <rect key="frame" x="195" y="0.0" width="153" height="95.333333333333329"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="agt-Pr-0B5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="95.333333333333329"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rszv" translatesAutoresizingMaskIntoConstraints="NO" id="82L-W6-I06">
+                                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SRBM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8m-qZ-bl8">
+                                                                <rect key="frame" x="14.333333333333346" y="75" width="46.333333333333343" height="20.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" name="dark_military"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzZ-uG-BuA">
+                                                        <rect key="frame" x="103" y="37.666666666666629" width="50" height="20.333333333333329"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="6QZ-n3-QGz"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="dark_military"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="ua_blue"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="rK8-LV-C8v">
+                                        <rect key="frame" x="0.0" y="413.33333333333337" width="354" height="95.333333333333314"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="gze-Af-viQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="155.66666666666666" height="95.333333333333329"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pky-Ne-hg9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="77.666666666666671" height="95.333333333333329"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oilCar" translatesAutoresizingMaskIntoConstraints="NO" id="8M1-be-VF9">
+                                                                <rect key="frame" x="1.3333333333333286" y="0.0" width="75" height="75"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuel tanks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWV-0D-gXj">
+                                                                <rect key="frame" x="0.0" y="75" width="77.666666666666671" height="20.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" name="dark_military"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieu-3u-Aq5">
+                                                        <rect key="frame" x="105.66666666666669" y="37.666666666666629" width="50" height="20.333333333333329"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="t9c-7R-AON"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="dark_military"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="3kF-GJ-8Ly">
+                                                <rect key="frame" x="195.66666666666663" y="0.0" width="158.33333333333337" height="95.333333333333329"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vI4-mZ-iLc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80.333333333333329" height="95.333333333333329"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warship" translatesAutoresizingMaskIntoConstraints="NO" id="tyW-sp-JVe">
+                                                                <rect key="frame" x="2.6666666666666856" y="0.0" width="75" height="75"/>
+                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Naval Ship" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTe-8n-IkK">
+                                                                <rect key="frame" x="0.0" y="75" width="80.333333333333329" height="20.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" name="dark_military"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ie8-i9-Svd">
+                                                        <rect key="frame" x="108.33333333333334" y="37.666666666666629" width="50" height="20.333333333333329"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="P9j-CG-lN7"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="dark_military"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="ua_blue"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="ua_blue"/>
+                                <color key="tintColor" name="dark_military"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="ua_blue"/>
+                        <color key="tintColor" name="dark_military"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Au8-zW-xRV" secondAttribute="trailing" constant="15" id="GGe-Me-2aU"/>
+                            <constraint firstItem="waS-jD-PWa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kxq-mV-7Ii"/>
+                            <constraint firstItem="Au8-zW-xRV" firstAttribute="top" secondItem="waS-jD-PWa" secondAttribute="bottom" constant="30" id="LxO-gg-sid"/>
+                            <constraint firstItem="waS-jD-PWa" firstAttribute="top" secondItem="4aR-US-tRc" secondAttribute="bottom" constant="20" id="Rju-q2-ahR"/>
+                            <constraint firstItem="Au8-zW-xRV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="X5e-ca-tcB"/>
+                            <constraint firstItem="4aR-US-tRc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="ZPo-it-isv"/>
+                            <constraint firstItem="4aR-US-tRc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hyW-ud-4nr"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Equipment" image="party.popper" catalog="system" id="jBK-Ll-Cjv">
+                        <color key="badgeColor" red="0.037870269460000001" green="0.037870269460000001" blue="0.037870269460000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="MRLLabel" destination="hFO-ZH-rAm" id="QoQ-Jm-ly0"/>
+                        <outlet property="SRBMLabel" destination="CzZ-uG-BuA" id="GKS-JI-q72"/>
+                        <outlet property="aircraftLabel" destination="fCb-az-spv" id="sas-0b-VYR"/>
+                        <outlet property="antiAircraftWarfareLabel" destination="cbw-bY-WLn" id="hdC-3F-EyC"/>
+                        <outlet property="apcLabel" destination="EXg-zT-yoD" id="1Z4-al-n4G"/>
+                        <outlet property="cruiseMissilesLabel" destination="9FV-V0-lJy" id="4yr-v9-3bd"/>
+                        <outlet property="datePicker" destination="mJb-3Z-LBk" id="DUm-wI-yO2"/>
+                        <outlet property="dayOfWarLabel" destination="k9z-ce-xWV" id="QDg-Ih-PKt"/>
+                        <outlet property="fieldArtilleryLabel" destination="CzZ-uG-BuA" id="O2t-Vg-9n9"/>
+                        <outlet property="helicopterLabel" destination="kR7-bI-d37" id="EkU-Wo-hXX"/>
+                        <outlet property="militaryAutoLabel" destination="ieu-3u-Aq5" id="t1U-4G-yJW"/>
+                        <outlet property="navalShipLabel" destination="Ie8-i9-Svd" id="Gf3-2w-qHu"/>
+                        <outlet property="tankLabel" destination="wo3-V5-2Jh" id="1Vy-m4-phq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-446.15384615384613" y="812.55924170616106"/>
+        </scene>
+        <!--Personnel view Controller-->
+        <scene sceneID="fp7-f9-7pQ">
+            <objects>
+                <viewController storyboardIdentifier="PersonnelViewController" title="Personnel" id="Cmp-Wj-Fxk" userLabel="Personnel view Controller" customClass="PersonnelViewController" customModule="InvadersCountdown" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zdT-ba-cWM">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="wey-iL-pc3">
+                                <rect key="frame" x="15" y="274" width="360" height="327"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="SQC-YP-gk8">
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="148"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dHc-hY-6Yw">
+                                                <rect key="frame" x="15" y="25.999999999999993" width="75.666666666666671" height="103.33333333333331"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="200_label" translatesAutoresizingMaskIntoConstraints="NO" id="WfL-Na-sY1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75.666666666666671" height="75"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personnel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hj-2x-vaN">
+                                                        <rect key="frame" x="0.0" y="83" width="75.666666666666671" height="20.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="dark_military"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNC-X3-WIp">
+                                                <rect key="frame" x="120.66666666666664" y="67.333333333333314" width="231.33333333333337" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="dark_military"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="ua_blue"/>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="15" leading="15" bottom="8" trailing="8"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="iCu-Mq-kKY">
+                                        <rect key="frame" x="0.0" y="179" width="360" height="148"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hmS-8b-mxj">
+                                                <rect key="frame" x="15" y="8" width="76" height="125"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="300_label" translatesAutoresizingMaskIntoConstraints="NO" id="98j-Z4-CVB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="76" height="75"/>
+                                                        <edgeInsets key="layoutMargins" top="8" left="15" bottom="8" right="8"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prisoners of war" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2u-lA-d49">
+                                                        <rect key="frame" x="0.0" y="83" width="76" height="42"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="76" id="8Rh-8H-vzi"/>
+                                                            <constraint firstAttribute="height" constant="42" id="Nie-KJ-EFn"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="dark_military"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5J-19-Kiz">
+                                                <rect key="frame" x="121" y="60.333333333333378" width="231" height="20.333333333333336"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="dark_military"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="ua_blue"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="15" bottom="15" right="8"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="ua_blue"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TaF-wj-Uto">
+                                <rect key="frame" x="108" y="195.33333333333334" width="174" height="58.666666666666657"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day of war" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7D-Br-UFs">
+                                        <rect key="frame" x="15" y="15.000000000000002" width="118" height="28.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" name="dark_military"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bK2-Xx-Vzq">
+                                        <rect key="frame" x="143" y="15.000000000000002" width="16" height="28.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" name="dark_military"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="ua_blue"/>
+                                <edgeInsets key="layoutMargins" top="15" left="15" bottom="15" right="15"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YHl-85-43c"/>
+                        <color key="backgroundColor" name="ua_blue"/>
+                        <color key="tintColor" name="dark_military"/>
+                        <constraints>
+                            <constraint firstItem="wey-iL-pc3" firstAttribute="top" secondItem="YHl-85-43c" secondAttribute="top" constant="227" id="283-ax-KoF"/>
+                            <constraint firstItem="wey-iL-pc3" firstAttribute="top" secondItem="TaF-wj-Uto" secondAttribute="bottom" constant="20" id="YiT-5n-cWA"/>
+                            <constraint firstItem="wey-iL-pc3" firstAttribute="leading" secondItem="YHl-85-43c" secondAttribute="leading" constant="15" id="eXG-vg-OEc"/>
+                            <constraint firstItem="TaF-wj-Uto" firstAttribute="centerX" secondItem="zdT-ba-cWM" secondAttribute="centerX" id="loR-xw-OW6"/>
+                            <constraint firstItem="YHl-85-43c" firstAttribute="trailing" secondItem="wey-iL-pc3" secondAttribute="trailing" constant="15" id="wCN-pp-AID"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Personnel" image="person.2.slash" catalog="system" id="s9D-O0-mXp">
+                        <color key="badgeColor" red="0.037870269460000001" green="0.037870269460000001" blue="0.037870269460000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="dayOfWarLabel" destination="bK2-Xx-Vzq" id="vjc-xP-rVx"/>
+                        <outlet property="personnelLabel" destination="DNC-X3-WIp" id="j3E-wk-HSm"/>
+                        <outlet property="powLabel" destination="V5J-19-Kiz" id="zZT-wN-z9y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PdC-k4-IKP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="364.61538461538458" y="812.55924170616106"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="OSd-WY-n1v">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="F83-D1-G8w" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zgI-63-7N6">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="milk_yellow"/>
+                        <color key="tintColor" systemColor="tintColor"/>
+                        <color key="barTintColor" red="0.22467045420000001" green="0.38635733509999998" blue="0.34386010610000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" name="dark_military"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="auN-iq-5Ul"/>
+                        <segue destination="Cmp-Wj-Fxk" kind="relationship" relationship="viewControllers" id="3J1-iK-YDi"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y6U-tH-CwP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="200_label" width="75" height="75"/>
+        <image name="300_label" width="75" height="75"/>
+        <image name="aircraft" width="75" height="75"/>
+        <image name="bbm" width="75" height="75"/>
+        <image name="garmata" width="75" height="75"/>
+        <image name="helicopter" width="75" height="75"/>
+        <image name="missle" width="75" height="75"/>
+        <image name="oilCar" width="75" height="75"/>
+        <image name="party.popper" catalog="system" width="128" height="116"/>
+        <image name="person.2.slash" catalog="system" width="128" height="98"/>
+        <image name="ppo" width="75" height="75"/>
+        <image name="rszv" width="75" height="75"/>
+        <image name="tank" width="75" height="75"/>
+        <image name="warship" width="75" height="75"/>
+        <namedColor name="dark_military">
+            <color red="0.46599999070167542" green="0.47400000691413879" blue="0.4699999988079071" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="milk_yellow">
+            <color red="0.090000003576278687" green="0.086999997496604919" blue="0.164000004529953" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="ua_blue">
+            <color red="0.11699999868869781" green="0.15000000596046448" blue="0.34299999475479126" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
